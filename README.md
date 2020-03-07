@@ -68,7 +68,7 @@ Agree on a few conditions ahead of time so there's no confusion encrypting and d
 
 3.) Use modular addition to encrypt and modular subtraction to decrypt as explained below instead of the other way around.
   
-Obviously there's some leeway here in how you can choose to do things as long as you heed the warnings above. Randomly generated secret keys and modular arithmetic are necessary to ensure their OTP is unbreakable.  
+Obviously there's some leeway here in how you can choose to do things as long as you heed the warnings above. Randomly generated secret keys and modular arithmetic are necessary to ensure the OTP is unbreakable.  
 
 ### 4.) Encrypt Your Message
 If we have a really long stream of random letters and numbers for our key, it's a good idea to start our message with some characters from the key itself so the recipient will know where where in the key they should start decrypting. Let's use the first five characters we generated (although in a longer example you might want to use a longer sequence to reduce the likelihood that there are identical sequences in the key somewhere, however unlikely).
