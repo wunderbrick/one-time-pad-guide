@@ -43,7 +43,7 @@ Let's say we end up with the following random numbers:
 
 2, 16, 3, 2, 5, 30, 32, 17, 22, 8, 11, 13, 11, 35, 26, 14, 31, 1, 6, 19, 4, 4, 33, 5, 11, 8, 6
 
-Next, assign these numbers values between A through Z and 0 through 9 as shown in TABLE 2 below. Starting at 0 will ensure you don't run into problems with modular arithmetic which we'll get to in a sec. 
+We'll assign these numbers values between A through Z and 0 through 9 as shown in TABLE 2 below. Starting at 0 will ensure you don't run into problems with modular arithmetic which we'll get to in a sec. 
 
 TABLE 2  
 ![](otp_table_2_alt.png)
