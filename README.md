@@ -71,9 +71,9 @@ Agree on a few conditions ahead of time so there's no confusion encrypting and d
 Obviously there's some leeway here in how you can choose to do things as long as you heed the warnings above. Randomly generated secret keys and modular arithmetic are necessary to ensure the OTP is unbreakable.  
 
 ### 4.) Encrypt Your Message
-If we have a really long stream of random letters and numbers for our key, it's a good idea to start our message with some characters from the key itself so the recipient will know where where in the key they should start decrypting. Let's use the first five characters we generated (although in a longer example you might want to use a longer sequence to reduce the likelihood that there are identical sequences in the key somewhere, however unlikely).
+If we have a really long stream of random letters and numbers for our key, it's a good idea to start our message with some characters from the key itself before the actual encrypted text so the recipient will know where in the key they should start decrypting. Let's use the first five characters we generated (although in a longer example you might want to use a longer sequence to reduce the likelihood that there are identical sequences in the key somewhere however unlikely).
 
-Our first five values were CQDCF. If I'm receiving this message from you, I'll find those sequences in my key and then start with the first character after that to decrypt.
+Our first five values were CQDCF. If I'm receiving this message from you, I'll find those characters in my key and then start with the first character after that to decrypt.
 
 Let's say you want to send the message "YOU NEED TO MOVE BEFORE 830" to your recipient. Write out the plaintext and the key below it for convenience:
 
@@ -104,6 +104,6 @@ TABLE 3
 Destroy your plaintext, key, and the random numbers used to generate it. This step is absolutely necessary. Make sure the recipient understands to do the same after decrypting. Threaten them.  
 
 ### 6.) Send
-Assuming the keys have never been compromised and you did everything perfectly you can now send the encrypted message over any insecure channel. Post it on Facebook! Don't use Facebook. I mean, you could send the message this way and it would still be safe but don't use Facebook because it's using you.
+Assuming the keys have never been compromised and you did everything perfectly you can now send the encrypted message over any insecure channel. Post it on Facebook! No, you wouldn't be caught dead on there. That's good. I mean, you could send the message this way and it would still be safe but don't use Facebook because it's using you.
 
 The message has now been transmitted and all attackers have been thwarted!   
