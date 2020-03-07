@@ -23,7 +23,7 @@ Also important to note: know the laws concerning cryptography for your country a
   
 Consider steganography to hide the fact that you’re carrying secret messages!
 
-## Absolutely Do not Forget or You Will Be Killed
+## Absolutely Do Not Forget or You Will Be Killed
 
 To make a perfect OTP, you must adhere to the following principles. Again, it is absolutely imperative or you will not have unbreakable encryption.
 
