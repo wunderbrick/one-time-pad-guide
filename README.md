@@ -35,7 +35,7 @@ To make a perfect OTP, you must adhere to the following principles. Again, it is
 
 ## Make the Thing
 
-### 1.) Randomly Generate Your Keys 
+### 1.) Generate Your Random Keys 
 Use 2 regular 6-sided dice but never ever ever simply add the 2 values together for your numbers because certain values will statistically occur far more often than others and you will introduce bias into things. It’s crucial to make sure each value has the same probability of occurring as any other value. Since we're encrypting both letters and numbers in this example, you will need to assign 36 values starting with 0 to each number/color combination of dice as shown below. If you roll a black 5 and a white 1 for example, you will end up with the random number 24.  
 
 ![](otp_table_1.png)
