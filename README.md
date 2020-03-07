@@ -1,5 +1,6 @@
 # UNBREAKABLE ENCRYPTION WITH ONE-TIME PADS 
-## A VERY SHORT SOMEWHAT OPINIONATED GUIDE  
+## A VERY SHORT SOMEWHAT OPINIONATED GUIDE
+### Pull requests welcome for clarity, catostrophic mistake corrections, etc.
 Licensed under CC0 1.0 Universal. This document is public domain.
 
 Use at your own risk. You should find someone who knows what they're doing to confirm this guide's accuracy. No one is liable for anything bad that happens to you because you followed this guide.
