@@ -65,7 +65,7 @@ C Q D C F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 6 R W I L N L 9 0 O 5 B G T E E 7 F L I
 This will work for a short message. What if we want to send something much longer? Things can get tedious pretty quickly. Maybe there are more efficient ways to generate random numbers (no, I'm absolutely not talking about software!). Can we trust these methods? Better not trust anything. Let's just stick to dice for now.
 
 ### 3.) Exchange Randomly Generated Keys 
-Share your keys ahead of time with the recipient over some secure channel (probably a face to face meeting). These keys will be used to encrypt and decrypt the messages you'll exchange after your meeting.
+Share your keys ahead of time (long before you intend to send encrypted messages) with the recipient over some secure channel (probably a face to face meeting). These keys will be used to encrypt and decrypt the messages you'll exchange after your meeting.
 
 ### 4.) Encrypt Your Message
 If we have a really long stream of random letters and numbers for our key, it's a good idea to start our message with some characters from the key itself before the actual encrypted text so the recipient will know where in the key they should start decrypting. Let's use the first five characters we generated (although in a longer example you might want to use a longer sequence to reduce the likelihood that there are identical sequences in the key somewhere however unlikely).
