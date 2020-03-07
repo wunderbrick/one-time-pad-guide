@@ -3,7 +3,7 @@
 ### Pull requests welcome for clarity, catostrophic mistake corrections, etc. This is still a rough draft.
 Licensed under CC0 1.0 Universal. This document is public domain.
 
-Use at your own risk. You should find someone who knows what they're doing to confirm this guide's accuracy. No one is liable for anything bad that happens to you because you followed this guide.
+Use at your own risk. Not written by an expert cryptographer or a lawyer. You should find someone who knows what they're doing to confirm this guide's accuracy. No one is liable for anything bad that happens to you because you follow this guide.
 
 ## Background and Opining
 
@@ -35,7 +35,16 @@ To make a perfect OTP, you must adhere to the following principles. Again, it is
 
 ## Make the Thing
 
-### 1.) Generate Your Random Keys 
+### 1.) Agree on Some Conditions with the Recipient
+Agree on a few conditions ahead of time so there's no confusion when encrypting and decrypting. Obviously there's some leeway here in how you can choose to do things as long as you heed the warnings above. Randomly generated secret keys and modular arithmetic are necessary to ensure the OTP is unbreakable. In this example let's agree that:
+
+1.) Messages can contain both letters and numbers.
+
+2.) Each of these letters and numbers will correspond to values 0 through 35 beginning with A at 0 and 9 at 35 (see TABLE 2). 
+
+3.) We'll use modular addition to encrypt and modular subtraction to decrypt as explained below instead of the other way around.
+ 
+### 2.) Generate Your Random Keys 
 Use 2 regular 6-sided dice but never ever ever simply add the 2 values together for your numbers because certain values will statistically occur far more often than others and you will introduce bias into things. It’s crucial to make sure each value has the same probability of occurring as any other value. Since we're encrypting both letters and numbers in this example, you will need to assign 36 values starting with 0 to each number/color combination of dice as shown below. If you roll a black 5 and a white 1 for example, you will end up with the random number 24.  
 
 ![](otp_table_1.png)
@@ -55,21 +64,8 @@ C Q D C F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 6 R W I L N L 9 0 O 5 B G T E E 7 F L I
 
 This will work for a short message. What if we want to send something much longer? Things can get tedious pretty quickly. Maybe there are more efficient ways to generate random numbers (no, I'm absolutely not talking about software!). Can we trust these methods? Better not trust anything. Let's just stick to dice for now.
 
-
-### 2.) Exchange Randomly Generated Keys 
+### 3.) Exchange Randomly Generated Keys 
 Share your keys ahead of time with the recipient over some secure channel (probably a face to face meeting). These keys will be used to encrypt and decrypt the messages you'll exchange after your meeting.
-
-
-### 3.) Agree on Some Conditions 
-Agree on a few conditions ahead of time so there's no confusion encrypting and decrypting:
-
-1.) In this example agree that messages can contain both letters and numbers.
-
-2.) Each of these letters and numbers will correspond to values 0 through 35 beginning with A at 0 and 9 at 35 (see TABLE 2). 
-
-3.) Use modular addition to encrypt and modular subtraction to decrypt as explained below instead of the other way around.
-  
-Obviously there's some leeway here in how you can choose to do things as long as you heed the warnings above. Randomly generated secret keys and modular arithmetic are necessary to ensure the OTP is unbreakable.  
 
 ### 4.) Encrypt Your Message
 If we have a really long stream of random letters and numbers for our key, it's a good idea to start our message with some characters from the key itself before the actual encrypted text so the recipient will know where in the key they should start decrypting. Let's use the first five characters we generated (although in a longer example you might want to use a longer sequence to reduce the likelihood that there are identical sequences in the key somewhere however unlikely).
@@ -90,7 +86,7 @@ Thus our ciphertext would be:
 
 Alternatively, you could use a Vigenere table (TABLE 3) to speed up the process. It’s important for to understand the modular arithmetic in case you don't have access to a Vigenere table or can’t remember how to encrypt/decrypt with one. To decrypt the message, work backward and use modular subtraction (going counterclockwise around our imaginary 0-35 clock) to subtract the key from the ciphertext and yield the plaintext. This means you start with “S” from the ciphertext and find that it has a value of 18 in TABLE 2. Then subtract 30, which is the value of “4” from the key according to TABLE 2, to get a value of 24. This value corresponds to “Y” in TABLE 2 and is the first letter of the plaintext.
 
-VIGENERE TABLE
+#### VIGENERE TABLE
 
 To encrypt, start with the plaintext character in its row and find the point where it meets the column of the key character. Starting with plaintext “Y” and key “4” this way should give you ciphertext “S”. Use pieces of paper to help guide your eyes. 
 
@@ -105,6 +101,6 @@ TABLE 3
 Destroy your plaintext, key, and the random numbers used to generate it. This step is absolutely necessary. Make sure the recipient understands to do the same after decrypting. Threaten them.  
 
 ### 6.) Send
-Assuming the keys have never been compromised and you did everything perfectly you can now send the encrypted message over any insecure channel. Post it on Facebook! No, you wouldn't be caught dead on there. That's good. I mean, you could send the message this way and it would still be safe but don't use Facebook because it's using you.
+Assuming the keys have never been compromised and you did everything perfectly you can now send the encrypted message over any insecure channel. Post it on Facebook! No, you wouldn't be caught dead on there. That's good. I mean, you could send the message this way and it would still be safe but don't use Facebook because Facebook uses you.
 
-The message has now been transmitted and all attackers have been thwarted!   
+The message has now been transmitted and all attackers have been thwarted!
