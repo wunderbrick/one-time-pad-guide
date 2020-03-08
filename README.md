@@ -60,7 +60,7 @@ TABLE 2
 
 By assigning letters and numbers to the string of random numbers from our dice rolls, we get the following encryption key:
 
-C Q D C F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 6 R W I L N L 9 0 O 5 B G T E E 7 F L I G
+C Q D C F 4 6 R W I L N L 9 0 O 5 B G T E E 7 F L I G
 
 This will work for a short message. What if we want to send something much longer? Things can get tedious pretty quickly. Maybe there are more efficient ways to generate random numbers (no, I'm absolutely not talking about software!). Can we trust these methods? Better not trust anything. Let's just stick to dice for now.
 
