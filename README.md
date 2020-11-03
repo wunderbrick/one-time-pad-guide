@@ -84,7 +84,7 @@ Thus our ciphertext would be:
 
 ![](otp_you_need_to_move_ciphertext.png)  
 
-Alternatively, you could use a Vigenere table (TABLE 3) to speed up the process. It’s important for to understand the modular arithmetic in case you don't have access to a Vigenere table or can’t remember how to encrypt/decrypt with one. To decrypt the message, work backward and use modular subtraction (going counterclockwise around our imaginary 0-35 clock) to subtract the key from the ciphertext and yield the plaintext. This means you start with “S” from the ciphertext and find that it has a value of 18 in TABLE 2. Then subtract 30, which is the value of “4” from the key according to TABLE 2, to get a value of 24. This value corresponds to “Y” in TABLE 2 and is the first letter of the plaintext.
+Alternatively, you could use a Vigenere table (TABLE 3) to speed up the process. It’s important to understand the modular arithmetic in case you don't have access to a Vigenere table or can’t remember how to encrypt/decrypt with one. To decrypt the message, work backward and use modular subtraction (going counterclockwise around our imaginary 0-35 clock) to subtract the key from the ciphertext and yield the plaintext. This means you start with “S” from the ciphertext and find that it has a value of 18 in TABLE 2. Then subtract 30, which is the value of “4” from the key according to TABLE 2, to get a value of 24. This value corresponds to “Y” in TABLE 2 and is the first letter of the plaintext.
 
 #### VIGENERE TABLE
 
